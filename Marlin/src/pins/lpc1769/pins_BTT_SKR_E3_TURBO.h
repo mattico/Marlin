@@ -34,7 +34,7 @@
 //
 // Servos
 //
-#define SERVO0_PIN                         P1_23
+#define SERVO0_PIN                         P1_25 // Connected my weird BLTOUCH to the E1DET connector
 
 //
 // TMC StallGuard DIAG pins
@@ -43,7 +43,7 @@
 #define Y_DIAG_PIN                         P1_28  // Y-STOP
 #define Z_DIAG_PIN                         P1_27  // Z-STOP
 #define E0_DIAG_PIN                        P1_26  // E0DET
-#define E1_DIAG_PIN                        P1_25  // E1DET
+//#define E1_DIAG_PIN                        P1_25  // E1DET
 
 //
 // Limit Switches
@@ -54,9 +54,9 @@
 //
 // Z Probe
 //
-#ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                  P1_22
-#endif
+// #ifndef Z_MIN_PROBE_PIN
+//   #define Z_MIN_PROBE_PIN                  P1_22
+// #endif
 
 //
 // Filament Runout Sensor
