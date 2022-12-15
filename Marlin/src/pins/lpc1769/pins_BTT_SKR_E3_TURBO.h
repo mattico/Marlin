@@ -40,7 +40,7 @@
 //
 // Servos
 //
-#define SERVO0_PIN                         P1_23
+#define SERVO0_PIN                         P1_25 // Connected my weird BLTOUCH to the E1DET connector
 
 //
 // TMC StallGuard DIAG pins
@@ -49,7 +49,7 @@
 #define Y_DIAG_PIN                         P1_28  // Y-STOP
 #define Z_DIAG_PIN                         P1_27  // Z-STOP
 #define E0_DIAG_PIN                        P1_26  // E0DET
-#define E1_DIAG_PIN                        P1_25  // E1DET
+// #define E1_DIAG_PIN                        P1_25  // E1DET
 
 //
 // Limit Switches
@@ -60,9 +60,9 @@
 //
 // Z Probe
 //
-#ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                  P1_22
-#endif
+// #ifndef Z_MIN_PROBE_PIN
+//   #define Z_MIN_PROBE_PIN                  P1_22
+// #endif
 
 //
 // Filament Runout Sensor
@@ -177,11 +177,12 @@
 #define HEATER_0_PIN                       P2_03  // EXTRUDER 0
 #define HEATER_1_PIN                       P2_04  // EXTRUDER 1
 #define HEATER_BED_PIN                     P2_05  // BED
-#define FAN_PIN                            P2_01
-#define FAN1_PIN                           P2_02
+#define FAN_PIN                            P2_01  // FAN0 Header: Part cooling fan
+#define FAN1_PIN                           P2_02  // FAN1 Header: Extruder cooling fan
 
 #ifndef CONTROLLER_FAN_PIN
-  #define CONTROLLER_FAN_PIN            FAN1_PIN
+  // Controller fan is connected to always-on FAN2 header
+  //#define CONTROLLER_FAN_PIN            FAN1_PIN
 #endif
 
 /**
