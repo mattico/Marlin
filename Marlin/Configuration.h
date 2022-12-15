@@ -92,6 +92,9 @@
   #define MOTHERBOARD BOARD_BTT_SKR_E3_TURBO
 #endif
 
+// Diag jumpers for stepper drivers removed? since sensorless_homing is disabled
+#define DIAG_JUMPERS_REMOVED
+
 /**
  * Select the serial port on the board to use for communication with the host.
  * This allows the connection of wireless adapters (for instance) to non-default port pins.
@@ -2078,7 +2081,7 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
